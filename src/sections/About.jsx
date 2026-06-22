@@ -1,5 +1,6 @@
 import { FaRegEnvelopeOpen } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { FiCode, FiCpu, FiServer } from "react-icons/fi";
 
 const About = () => {
   const services = [
@@ -32,11 +33,11 @@ const About = () => {
           <div className="border border-gray-500">
             <div>
               <h2 className="text-4xl font-bold">
-              About <span className="text-violet-500 ">Me</span>
-            </h2>
-            <div className="border-2 rounded-lg mt-2 border-violet-500 w-10"></div>
+                About <span className="text-violet-500 ">Me</span>
+              </h2>
+              <div className="border-2 rounded-lg mt-2 border-violet-500 w-10"></div>
             </div>
-            
+
             <p className="text-gray-400 mt-6 max-w-lg">
               {" "}
               I'm a passionate MERN Stack Developer with a strong foundation in
@@ -69,13 +70,44 @@ const About = () => {
             </div>
           </div>
           {/* right */}
-          <div className="border border-gray-600/40 bg-gray-700/20 p-3 rounded-lg shadow-lg shadow-violet-500/20"> 
-            <h3 className="font-semibold text-xl">
-              What I Do
-            </h3>
-            <div>
-
+          <div className="border border-gray-600/40 bg-gray-700/20 p-5 rounded-lg shadow-lg shadow-violet-500/20 ">
+            <h3 className="font-semibold text-xl">What I Do</h3>
+            <div className="flex flex-col mt-4 gap-3 ">
+              <div className="flex gap-4 items-center ">
+                <div className="bg-gray-800 p-2 rounded-lg hover:bg-zinc-800 transition-all duration-300">
+                  <FiCode />
+                </div>
+                <div>
+                  <h4 className=" font-semibold">Web Development</h4>
+                  <p className="text-gray-400 text-sm">
+                    Building responsive and scalable web applications.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-center ">
+                <div className="bg-gray-800 p-2 rounded-lg hover:bg-zinc-800 transition-all duration-300">
+                  <FiServer />
+                </div>
+                <div>
+                  <h4 className=" font-semibold">Backend Development</h4>
+                  <p className="text-gray-400 text-sm">
+                      Creating robust REST APIs and server side logic.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-center ">
+                <div className="bg-gray-800 p-2 rounded-lg hover:bg-zinc-800 transition-all duration-300">
+                  <FiCpu />
+                </div>
+                <div>
+                  <h4 className=" font-semibold">AI Integeration</h4>
+                  <p className="text-gray-400 text-sm">
+                    Integrating AI Models automation to build web applications.
+                  </p>
+                </div>
+              </div>
             </div>
+            <div></div>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Profile from '../assets/portfolio_profile_img.png'
 const Home = () => {
   return (
     <section id="home" className="pt-20 min-h-screen">
-      <div className="max-w-7xl mx-auto min-h-[calc(100vh-80px)] border border-amber-300">
+      <div className="max-w-7xl mx-auto lg:max-h-[calc(100vh-80px)] border border-amber-300">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* left section */}
           <div className="border border-blue-700 flex flex-col justify-center items-start order-1">

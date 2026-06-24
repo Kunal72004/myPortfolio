@@ -1,10 +1,65 @@
 import React from 'react'
+import ProjectCard from '../components/ProjectCard'
+import { FaLongArrowAltRight } from 'react-icons/fa'
+import Project1 from '../assets/Project_image/project1.png'
+import Project2 from '../assets/Project_image/project2.png'
+import Project3 from '../assets/Project_image/project3.png'
 
 const Projects = () => {
+  const projects = [
+    {
+      image: Project1,
+      title: "Portfolio Website",
+      description:
+        "Modern portfolio website built using React and Tailwind CSS.",
+      tech: ["React", "Tailwind", "JavaScript"],
+      github: "#",
+      demo: "#",
+    },
+
+    {
+      image: Project2,
+      title: "MERN Blog App",
+      description:
+        "Full stack blog platform with authentication and CRUD operations.",
+      tech: ["MongoDB", "Express", "React", "Node"],
+      github: "#",
+      demo: "#",
+    },
+
+    {
+      image: Project3,
+      title: "E-Commerce Store",
+      description:
+        "Complete e-commerce application with cart and payment integration.",
+      tech: ["React", "Node", "MongoDB"],
+      github: "#",
+      demo: "#",
+    },
+  ];
   return (
-    <div>
-      projects
-    </div>
+    <section id="projects" className="py-18 border border-blue-800">
+      <div className="max-w-7xl mx-auto border border-y-amber-100">
+        
+        <div className='flex justify-between items-center gap-5'>
+          <h1 className='font-bold text-2xl md:text-4xl sm:wrap-normal'>Featured <span className='text-violet-500'>Projects</span></h1>
+          <a className='text-violet-500 flex items-center sm:gap-1  md:gap-2 text-sm hover:text-violet-400 hover:scale-105 transition-all duration-300'><span>View All Projects</span> <FaLongArrowAltRight /></a>
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-5 md:mt-7 mt-5'>
+           {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              tech={project.tech}
+              github={project.github}
+              demo={project.demo}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

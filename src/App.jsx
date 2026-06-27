@@ -3,9 +3,11 @@ import Home from "./sections/Home";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
-import Dsa from "./sections/Dsa";
+import DSA from "./sections/DSA";
 import Contact from "./sections/Contact";
 import Navbar from "./components/Navbar";
+import AI from "./sections/AI";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
@@ -18,9 +20,11 @@ const App = () => {
           <About />
           <Skills />
           <Projects />
-          <Dsa />
+          <DSA />
+          {/* <AI/> */}
           <Contact />
         </div>
+        <Footer/>
         
       </div>
     </>

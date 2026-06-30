@@ -21,7 +21,7 @@ const ProjectCard = ({ image, title, description, tech, github, demo }) => {
         {/* tags */}
         <div className="flex gap-3 mt-2">
           {tech.map((item, idx) => (
-            <div className="border border-gray-600/40 px-2 py-1 text-xs rounded-md rou bg-gray-700/20 hover:bg-gray-950">
+            <div key={idx} className="border border-gray-600/40 px-2 py-1 text-xs rounded-md rou bg-gray-700/20 hover:bg-gray-950">
               {item}
             </div>
           ))}

@@ -27,7 +27,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="border border-red-400 py-10">
+    <section id="skills" className=" py-10">
       <div className="max-7xl max-auto">
         <div className="border border-gray-600/40 bg-gray-700/20 rounded-md p-8 backdrop-blur-sm">
           <h2 className="text-4xl font-bold mb-8">Skills</h2>

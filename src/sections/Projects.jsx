@@ -38,8 +38,8 @@ const Projects = () => {
     },
   ];
   return (
-    <section id="projects" className="py-18 border border-blue-800">
-      <div className="max-w-7xl mx-auto border border-y-amber-100">
+    <section id="projects" className="py-18 ">
+      <div className="max-w-7xl mx-auto ">
         
         <div className='flex justify-between items-center gap-5'>
           <h1 className='font-bold text-2xl md:text-4xl sm:wrap-normal'>Featured <span className='text-violet-500'>Projects</span></h1>

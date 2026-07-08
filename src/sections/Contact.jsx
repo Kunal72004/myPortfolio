@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import Message from '../assets/message.png'
+import toast from "react-hot-toast";
 const Contact = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  emailjs
+    .sendForm(
+      "service_utkk4ja",
+      "template_wb2ts38",
+      form.current,
+      "CqcFbvQ_588NuLFoa"
+    )
+    .then(() => {
+      toast.success("Message sent successfully!");
+      setLoading(false);
+      form.current.reset();
+    })
+    .catch(() => {
+       toast.error("Failed to send message!");
+      setLoading(false);
+    });
+};
   return (
     <section id="contact" className="py-10">
       <div className="max-w-7xl mx-auto bg-zinc-900/60 border border-white/10 rounded-lg p-3 ">
@@ -32,16 +59,20 @@ const Contact = () => {
             </div>
           </div>
           {/* center */}
-          <div className="grid lg:col-span-5 border border-yellow-400 gap-5 ">
+          <form ref={form} onSubmit={sendEmail} className="grid lg:col-span-5  gap-5 ">
             <div className="grid md:grid-cols-2 gap-5">
               <input
                 type="text"
+                name="name"
+                required
                 placeholder="Your Name"
                 className="bg-transparent border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-violet-500"
               />
 
               <input
                 type="email"
+                name="email"
+                required
                 placeholder="Your Email"
                 className="bg-transparent border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-violet-500"
               />
@@ -49,11 +80,14 @@ const Contact = () => {
 
             <textarea
               rows="5"
+              name="message"
+              required
               placeholder="Your Message"
               className="w-full mt-5 bg-transparent border border-white/10 rounded-xl px-5 py-4 resize-none outline-none focus:border-violet-500"
             ></textarea>
 
             <button
+            type="submit"
               className="
                 mt-5
                 px-8
@@ -74,12 +108,12 @@ const Contact = () => {
                 
                 "
             >
-              Send Message
+              {loading ? "Sending...": "Send Message"}
               <FiSend className="text-xl" />
             </button>
-          </div>
+          </form>
           {/* right */}
-          <div className=" lg:col-span-3 border border-green-500 flex justify-center lg:items-center">
+          <div className=" lg:col-span-3 flex justify-center lg:items-center">
             <img className="sm:w-44 sm:h-40 md:w-64 md:h-60 lg:w-80 lg:h-60 object-fit" src={Message} alt="message.png" />
           </div>
         </div>

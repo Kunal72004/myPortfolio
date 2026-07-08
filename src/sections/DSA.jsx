@@ -33,9 +33,9 @@ const DSA = () => {
 
   return (
     <section id='dsa' className='py-15'>
-      <div className='max-w-7xl mx-auto border border-amber-700 flex flex-col'>
+      <div className='max-w-7xl mx-auto flex flex-col'>
         <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold'>DSA <span className='text-violet-500'>&</span> <span>Coding Stats</span></h1>
-        <div className='border border-red-300 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  md:gap-5 mt-5'>
+        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  md:gap-5 mt-5'>
           {stats.map((stat,idx)=>(
             <div key={idx} className='rounded-lg border border-white/10 bg-gray-700/20 px-5 py-10 '>
               {!stat.image ? 

@@ -6,10 +6,10 @@ import Profile from "../assets/portfolio_profile_img.png";
 const Home = () => {
   return (
     <section id="home" className="pt-20 min-h-screen">
-      <div className="max-w-7xl mx-auto lg:max-h-[calc(100vh-80px)] border border-amber-300">
+      <div className="max-w-7xl mx-auto lg:max-h-[calc(100vh-80px)] ">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* left section */}
-          <div className="border border-blue-700 flex flex-col justify-center items-start order-1">
+          <div className="flex flex-col justify-center items-start order-1">
             <span className="text-violet-400 text-xl font-medium ">
               <span className="text-2xl">👋</span> Hello, I'm
             </span>
@@ -71,8 +71,8 @@ const Home = () => {
           </div>
 
           {/* right section */}
-          <div className="border border-red-700 flex justify-center items-center order-2">
-            <div className="overflow-hidden border w-75 md:w-95 lg:w-full border-rose-700">
+          <div className=" flex justify-center items-center order-2">
+            <div className="overflow-hidden  w-75 md:w-95 lg:w-full ">
               <img
                 className="w-full h-full object-contain"
                 src={Profile}

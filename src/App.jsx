@@ -8,9 +8,12 @@ import Contact from "./sections/Contact";
 import Navbar from "./components/Navbar";
 import AI from "./sections/AI";
 import Footer from "./components/Footer";
+import { Toaster } from "react-hot-toast";
 const App = () => {
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
+
       <div className="min-h-screen w-full overflow-x-hidden">
         <Navbar />
         <div className="max-w-10/12 mx-auto">
@@ -22,8 +25,7 @@ const App = () => {
           {/* <AI/> */}
           <Contact />
         </div>
-        <Footer/>
-        
+        <Footer />
       </div>
     </>
   );

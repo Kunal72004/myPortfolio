@@ -140,9 +140,82 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-      
-       
-    
+      <div
+        onClick={() => setMenuOpen(false)}
+        className={`
+    fixed
+    inset-0
+    top-20
+    bg-black/60
+    backdrop-blur-sm
+    transition-all
+    duration-300
+    md:hidden
+    z-40
+    ${menuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"}
+  `}
+      ></div>
+      <div
+        className={`
+    fixed
+    top-20
+    right-0
+    h-screen
+    w-72
+    bg-[#09090B]
+    border-l
+    border-white/10
+    z-50
+    md:hidden
+    transform
+    transition-transform
+    duration-500
+    ease-in-out
+    ${menuOpen ? "translate-x-0" : "translate-x-full"}
+  `}
+      >
+        <div className="flex flex-col mt-8 px-6 gap-3">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              onClick={() => setMenuOpen(false)}
+              className={`px-4 py-3 rounded-xl text-gray-300 hover:bg-white/5 hover:text-violet-400 hover:translate-x-2`}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+
+        {/* Resume Button */}
+
+        <div className="px-6 mt-8">
+          <a
+            href="/Kunal_Resume.pdf"
+            download="Kunal_Sikarwar_Resume.pdf"
+            onClick={() => setMenuOpen(false)}
+            className="
+      flex
+      items-center
+      justify-center
+      gap-2
+      py-3
+      rounded-xl
+      bg-gradient-to-r
+      from-indigo-500
+      to-violet-500
+      hover:scale-105
+      transition-all
+      duration-300
+      shadow-lg
+      hover:shadow-violet-500/30
+    "
+          >
+            Download Resume
+            <FiDownload />
+          </a>
+        </div>
+      </div>
     </>
   );
 };

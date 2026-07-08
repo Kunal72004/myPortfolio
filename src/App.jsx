@@ -12,8 +12,6 @@ const App = () => {
   return (
     <>
       <div className="min-h-screen w-full overflow-x-hidden">
-        
-
         <Navbar />
         <div className="max-w-10/12 mx-auto">
           <Home />

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaLongArrowAltRight } from "react-icons/fa";
 import { SiGmail, SiLeetcode } from "react-icons/si";
-import Profile from '../assets/portfolio_profile_img.png'
+import Profile from "../assets/portfolio_profile_img.png";
 
 const Home = () => {
   return (
@@ -25,24 +25,46 @@ const Home = () => {
               MongoDB, Express.js, React.js and Node.js.
             </p>
             <div className="flex gap-4 mt-8 ">
-              <button className="bg-linear-to-br from-indigo-500 to-violet-500 px-6 py-3 flex gap-1 items-center rounded-md font-medium hover:scale-105 shadow-lg hover:shadow-violet-500/20 transition-all duration-300 ">
+              <button className="bg-linear-to-br from-indigo-500 to-violet-500 text-sm px-3 py-3 md:text-lg md:px-6 md:py-3 flex gap-1 items-center rounded-md font-medium hover:scale-105 shadow-lg hover:shadow-violet-500/20 transition-all duration-300  ">
                 View Projects <FaLongArrowAltRight />
               </button>
-              <button className="border border-violet-500/60 px-6 py-3 flex gap-1 items-center rounded-md hover:border-violet-500/30 hover:scale-105 hover:bg-violet-500/10 transition-all duration-300">
+              <button className="border border-violet-500/60 text-sm px-3 py-3 md:text-lg md:px-6 md:py-3 flex gap-1 items-center rounded-md hover:border-violet-500/30 hover:scale-105 hover:bg-violet-500/10 transition-all duration-300">
                 Download Resume <FaLongArrowAltRight />
               </button>
             </div>
             <div className="flex gap-6 mt-5  md:text-xl px-2">
-              <a href="https://github.com/Kunal72004">
+              <a
+                href="https://github.com/Kunal72004"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-violet-500 hover:scale-110 transition-all duration-300"
+              >
                 <FaGithub />
               </a>
-              <a href="www.linkedin.com/in/kunal-sikarwar-057b67360">
+
+              <a
+                href="https://www.linkedin.com/in/kunal-sikarwar-057b67360"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-violet-500 hover:scale-110 transition-all duration-300"
+              >
                 <FaLinkedin />
               </a>
-              <a href="https://leetcode.com/u/Kunal072004/">
+
+              <a
+                href="https://leetcode.com/u/Kunal072004/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-violet-500 hover:scale-110 transition-all duration-300"
+              >
                 <SiLeetcode />
               </a>
-              <a href="">
+
+              <a
+                href="mailto:kunal07sikarwar@gmail.com"
+                target="_self"
+                className="hover:text-violet-500 hover:scale-110 transition-all duration-300"
+              >
                 <SiGmail />
               </a>
             </div>
@@ -51,8 +73,12 @@ const Home = () => {
           {/* right section */}
           <div className="border border-red-700 flex justify-center items-center order-2">
             <div className="overflow-hidden border w-75 md:w-95 lg:w-full border-rose-700">
-              <img className="w-full h-full object-contain" src={Profile} alt="profile img" />
-            </div> 
+              <img
+                className="w-full h-full object-contain"
+                src={Profile}
+                alt="profile img"
+              />
+            </div>
           </div>
         </div>
       </div>

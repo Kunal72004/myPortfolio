@@ -9,7 +9,7 @@ const DSA = () => {
     {
       title: "LeetCode Chart",
       icon: <SiLeetcode />,
-      value: "250+",
+      value: "270+",
       line: "Problems Solved",
     },
     {
@@ -20,7 +20,7 @@ const DSA = () => {
     {
       title: "GitHub",
       icon: <FaGithub />,
-      value: "30+",
+      value: "35+",
       line: "Public Repositories",
       
     },
@@ -49,7 +49,7 @@ const DSA = () => {
               </div> : 
               <div className='flex flex-col '>
                 <h3 className='text-xl font-semibold mb-5'>{stat.title}</h3>
-                <a href={stat.id == 1? "https://leetcode.com/u/Kunal072004/": "https://github.com/Kunal72004"}>
+                <a target="_blank" href={stat.id == 1? "https://leetcode.com/u/Kunal072004/": "https://github.com/Kunal72004"}>
                 <img className='lg:h-22  hover:scale-105 transition-all duration-500' src={stat.image} alt="leetcode Profile" />
                 </a>
 

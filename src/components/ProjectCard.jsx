@@ -19,7 +19,7 @@ const ProjectCard = ({ image, title, description, tech, github, demo }) => {
         <h3 className=" md:text-xl font-semibold">{title}</h3>
         <p className="  text-gray-400 leading-5 md:leading-7 ">{description}</p>
         {/* tags */}
-        <div className="flex gap-3 mt-2">
+        <div className="flex gap-3 mt-2 flex-wrap">
           {tech.map((item, idx) => (
             <div key={idx} className="border border-gray-600/40 px-2 py-1 text-xs rounded-md rou bg-gray-700/20 hover:bg-gray-950">
               {item}
@@ -27,11 +27,12 @@ const ProjectCard = ({ image, title, description, tech, github, demo }) => {
           ))}
         </div>
         <div className="flex items-center justify-between mt-3 text-violet-500 ">
-          <a className="flex items-center gap-2" href={demo}>
+          {demo ? <a target="_blank" className="flex items-center gap-2" href={demo}>
             Live Demo
             <FiExternalLink />
-          </a>
-          <a className="flex items-center gap-2" href={github}>
+          </a>:<div></div>}
+          
+          <a target="_blank" className="flex items-center gap-2" href={github}>
             GitHub
             <FaGithub />
           </a>

@@ -25,12 +25,19 @@ const Home = () => {
               MongoDB, Express.js, React.js and Node.js.
             </p>
             <div className="flex gap-4 mt-8 ">
-              <button className="bg-linear-to-br from-indigo-500 to-violet-500 text-sm px-3 py-3 md:text-lg md:px-6 md:py-3 flex gap-1 items-center rounded-md font-medium hover:scale-105 shadow-lg hover:shadow-violet-500/20 transition-all duration-300  ">
+              <a
+                href="#projects"
+                className="bg-linear-to-br from-indigo-500 to-violet-500 text-sm px-3 py-3 md:text-lg md:px-6 md:py-3 flex gap-1 items-center rounded-md font-medium hover:scale-105 shadow-lg hover:shadow-violet-500/20 transition-all duration-300  "
+              >
                 View Projects <FaLongArrowAltRight />
-              </button>
-              <button className="border border-violet-500/60 text-sm px-3 py-3 md:text-lg md:px-6 md:py-3 flex gap-1 items-center rounded-md hover:border-violet-500/30 hover:scale-105 hover:bg-violet-500/10 transition-all duration-300">
+              </a>
+              <a
+                href="/Kunal_Resume.pdf"
+                download="Kunal_Sikarwar_Resume.pdf"
+                className="border border-violet-500/60 text-sm px-3 py-3 md:text-lg md:px-6 md:py-3 flex gap-1 items-center rounded-md hover:border-violet-500/30 hover:scale-105 hover:bg-violet-500/10 transition-all duration-300"
+              >
                 Download Resume <FaLongArrowAltRight />
-              </button>
+              </a>
             </div>
             <div className="flex gap-6 mt-5  md:text-xl px-2">
               <a

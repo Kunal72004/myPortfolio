@@ -7,22 +7,42 @@ const Skills = () => {
     {
       title: "Frontend",
       icon: <FaLaptopCode />,
-      skills: ["React", "Next.js", "JavaScript", "Tailwind CSS", "Redux"],
+      skills: [
+        { name: "React", level: 5 },
+        { name: "JavaScript", level: 5 },
+        { name: "Tailwind CSS", level: 4 },
+        { name: "Redux", level: 4 },
+        { name: "HTML", level: 5 },
+        { name: "CSS", level: 5 },
+      ],
     },
     {
       title: "Backend",
       icon: <FaServer />,
-      skills: ["Node.js", "Express.js", "REST API", "JWT", "Socket.io"],
+      skills: [
+        { name: "Node.js", level: 3 },
+        { name: "Express.js", level: 4 },
+        { name: "REST API", level: 4 },
+        { name: "JWT", level: 3 },
+        { name: "Authentication & Authorization", level: 4 },
+      ],
     },
     {
       title: "Database",
       icon: <FaDatabase />,
-      skills: ["MongoDB", "MySQL", "Firebase"],
+      skills: [
+        { name: "MongoDB", level: 4 },
+        { name: "MySQL", level: 2 },
+      ],
     },
     {
       title: "Tools",
       icon: <FaTools />,
-      skills: ["Git & GitHub", "Docker", "Postman", "VS Code"],
+      skills: [
+        { name: "Git & GitHub", level: 4 },
+        { name: "Postman", level: 4 },
+        { name: "VS Code", level: 5 },
+      ],
     },
   ];
 
@@ -32,14 +52,16 @@ const Skills = () => {
         <div className="border border-gray-600/40 bg-gray-700/20 rounded-md p-8 backdrop-blur-sm">
           <h2 className="text-4xl font-bold mb-8">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-             {skillsData.map((category, index) => (
+            {skillsData.map((category, index) => (
               <div
                 key={index}
                 className={`
                   px-4
-                  ${index !== skillsData.length - 1
-                    ? "xl:border-r xl:border-white/10"
-                    : ""} pb-5
+                  ${
+                    index !== skillsData.length - 1
+                      ? "xl:border-r xl:border-white/10"
+                      : ""
+                  } pb-5
                 `}
               >
                 {/* Category Header */}
@@ -48,9 +70,7 @@ const Skills = () => {
                     {category.icon}
                   </span>
 
-                  <h3 className="font-semibold text-lg">
-                    {category.title}
-                  </h3>
+                  <h3 className="font-semibold text-lg">{category.title}</h3>
                 </div>
 
                 {/* Skills */}
@@ -60,32 +80,26 @@ const Skills = () => {
                       key={idx}
                       className="flex justify-between items-center"
                     >
-                      <span className="text-gray-300">
-                        {skill}
-                      </span>
+                      <span className="text-gray-300">{skill.name}</span>
 
-                      {/* Dots */}
-                      <div className="flex gap-1 justify-between">
+                      <div className="flex gap-1">
                         {[1, 2, 3, 4, 5].map((dot) => (
                           <div
                             key={dot}
                             className={`
-                              w-2.5
-                              h-2.5
-                              rounded-full
-                              ${
-                                dot <= 4
-                                  ? "bg-violet-500"
-                                  : "bg-zinc-700"
-                              }
-                            `}
+            w-2.5
+            h-2.5
+            rounded-full
+            transition-all
+            duration-300
+            ${dot <= skill.level ? "bg-violet-500" : "bg-zinc-700"}
+          `}
                           />
                         ))}
                       </div>
                     </div>
                   ))}
                 </div>
-
               </div>
             ))}
           </div>

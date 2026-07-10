@@ -15,10 +15,10 @@ const Contact = () => {
 
   emailjs
     .sendForm(
-      "service_utkk4ja",
-      "template_wb2ts38",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       form.current,
-      "CqcFbvQ_588NuLFoa"
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(() => {
       toast.success("Message sent successfully!");
@@ -30,6 +30,7 @@ const Contact = () => {
       setLoading(false);
     });
 };
+
   return (
     <section id="contact" className="py-10">
       <div className="max-w-7xl mx-auto bg-zinc-900/60 border border-white/10 rounded-lg p-3 ">

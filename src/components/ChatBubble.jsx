@@ -17,15 +17,27 @@ const ChatBubble = ({ message }) => {
       }`}
     >
       <div
-        className={`max-w-[95%]
-sm:max-w-[90%]
-lg:max-w-[80%]
-wrap-break-word
-overflow-hidden rounded-2xl px-5 py-4 text-sm md:text-base shadow-lg ${
-          message.type === "user"
-            ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white"
-            : "bg-zinc-800 border border-white/10 text-gray-100"
-        }`}
+        className={`
+w-fit
+max-w-[85%]
+sm:max-w-[80%]
+lg:max-w-[75%]
+rounded-2xl
+px-3
+py-3
+sm:px-5
+sm:py-4
+text-[15px]
+sm:text-base
+shadow-lg
+break-words
+overflow-hidden
+${
+  message.type === "user"
+    ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white"
+    : "bg-zinc-800 border border-white/10 text-gray-100"
+}
+`}
       >
         {message.type === "user" ? (
           <p className="leading-7 whitespace-pre-wrap">{message.text}</p>
@@ -86,7 +98,7 @@ overflow-hidden rounded-2xl px-5 py-4 text-sm md:text-base shadow-lg ${
 
               table: ({ children }) => (
                 <div className="overflow-x-auto my-4">
-                  <table className="w-full border-collapse border border-gray-700 text-sm">
+                  <table className="min-w-max border-collapse border border-gray-700 text-sm">
                     {children}
                   </table>
                 </div>

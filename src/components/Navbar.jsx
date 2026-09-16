@@ -162,7 +162,7 @@ const Navbar = () => {
     right-0
     h-screen
     w-72
-    bg-[#09090B]
+    bg-[#010106]
     border-l
     border-white/10
     z-50
